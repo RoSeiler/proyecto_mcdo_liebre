@@ -1,0 +1,333 @@
+@import url(normalize.css);
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css");
+
+
+* {
+    box-sizing: border-box;
+
+}
+
+/*-----------------Header----------------*/
+.barra-busqueda {
+    display: flex;
+    width: 30px;
+    padding: 20px;
+}
+
+::placeholder {
+    color: grey;
+}
+
+.main-header {
+    background-color: #EAC926;
+    width: 100vw;
+    padding: 20px;
+    display: block;
+
+
+
+}
+
+.logo {
+    width: 200px;
+    margin: 0px;
+    padding: 0px;
+
+
+}
+
+h3 {
+    font-size: 24px;
+}
+
+.copy-header {
+    font-weight: 400;
+    text-align: center;
+    font-size: 20px;
+
+}
+
+.texto-azul {
+    color: #03264C;
+}
+
+.main-header-navbar {
+    display: none;
+    /*oculto la barra para la version mobile*/
+}
+
+.main-header-navbar ul {
+    list-style: none;
+    margin: 0%;
+    padding: 0%;
+    font-size: 24px;
+}
+
+.main-header-navbar a {
+    /*la a me permite aplicarle estilo a cualquier elemento adentro de cualquiera de las 2 navbar*/
+    text-decoration: none;
+    color: rgb(27, 26, 26);
+    display: inline-block;
+    /*dado que todas las etiquetas a son elementos de linea y no quiero que sean de linea. Asi les voy a poder pner un poco de relleno:*/
+    padding: 3px 0;
+    font-size: 17px;
+}
+
+.burger-menu {
+    background-color: #1259c3;
+    color: #ffff;
+    display: block;
+    /*lo quiero tratar como bloque*/
+    font-size: 20px;
+    max-width: 50px;
+    padding: 15px 0;
+    /*arriba y abajo 15, a los costados 0 porque ya tengo definido el ancho*/
+    border-radius: 8px;
+    text-align: center;
+    font-size: 22px;
+    margin: auto;
+    /*comoe specifique que sea un elemento de bloque, con margin auto ya lo alinea*/
+}
+
+
+/*-----------------estructura body-----------------------------*/
+
+body {
+
+    font-family: "roboto", sans-serif;
+    background-color: #f2f2f2;
+
+}
+
+.register-container {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 50%;
+    margin: auto;
+    padding: 20px 30px;
+    justify-content: space-between;
+
+
+
+}
+
+.register-container ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.register-container li {
+    margin-bottom: 10px;
+
+}
+
+.form-dates input {
+
+    border: none;
+    text-align: center;
+    border-radius: 4px;
+    padding: 20px;
+    width: 80%;
+}
+
+.form-texts {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 20px;
+    padding-left: 70px;
+    width: 80%;
+    text-align: left;
+}
+
+.form-texts input {
+    width: 10%;
+
+}
+
+.texts{
+    
+    text-align: start;
+    padding-left: 60px;
+}
+.texts input{
+width: 10%;
+}
+
+
+
+.buttons button {
+    background-color: #1259c3;
+    color: white;
+    border: none;
+    width: 80%;
+    padding: 2%;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.intereses {
+    
+    text-align: start;
+    padding-left: 60px;
+    
+}
+
+.intereses input{
+    width:10%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*------------------------------footer----------------------------------*/
+
+.main-footer {
+    font-size: 12px;
+    color: #666;
+    text-align: center;
+    background-color: white;
+    padding: 20px 15px;
+}
+
+#gift,
+#card,
+#shield {
+    align-items: center;
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #1259c3;
+}
+
+.paragraph-1 h2,
+.paragraph-2 h2,
+.paragraph-3 h2 {
+    font-size: 20px;
+    font-weight: bold;
+
+}
+
+.paragraph-1 h3,
+.paragraph-2 h3,
+.paragraph-3 h3 {
+    font-size: 15px;
+    font-weight: normal;
+}
+
+.Copyright {
+    text-align: left;
+    padding-top: 40px;
+}
+
+
+/*------------------tablets --------------------*/
+
+@media (min-width: 361px) {
+
+
+
+
+
+    .main-header-top-bar {
+        display: flex;
+        /* --para hacer visible un elemento--le indico que vamos a trabajar con flexbox, con flexbox trabajo sobre el contenedor y no sobre los elementos*/
+        justify-content: space-between;
+        /*entiende que hay varios elementos y que el espacio entre ellos debe ser homogeneo*/
+    }
+
+    .copy-header {
+
+        max-width: 100%;
+        /*para alinearlo*/
+        text-align: right;
+    }
+
+    .burger-menu {
+
+        display: none;
+        /*para que no se muestre la hamburguesita ene sta medida*/
+    }
+
+    .main-header-navbar {
+
+        display: flex;
+        /*la navbar contiene muchos elementos*/
+        justify-content: space-between;
+        /*para que nso queden los elementos separados por un espacio */
+    }
+
+    .main-header-navbar ul {
+        /*de la main navbar los elementos ul van a tener tmb display flex*/
+
+        display: flex;
+    }
+
+    .main-header-navbar li {
+        /*de la main navbar los elementos ul van a tener tmb display flex*/
+        margin: 0 5px;
+    }
+
+    /*---------------------------pantallas arriba de 769px----------------------------------*/
+
+
+    @media (min-width:769px) {
+        /*para limitar que los contenedores (los que contienen la barra de navegacion , el logo..) no aumenten*/
+        /*entonces si como min el viewport está en 1200 px se le aplican las sgtes caract.a los elementos*/
+
+
+
+        .main-header-top-bar,
+        .main-header-navbar {
+
+            max-width: 1200px;
+            /*el max de ancho que los elementos van a alcanzar*/
+            margin: auto;
+            /*para centrar los elementos DE BLOQUE*/
+        }
+
+        .main-header-navbar {
+
+            margin-top: 40px;
+        }
+
+        .main-header-top-bar {
+
+            align-items: center;
+        }
+
+        .main-header-navbar li {
+
+            margin: 0 10px;
+        }
+
+        .main-header-navbar a {
+
+            font-size: 19px;
+        }
+
+        .logo {
+
+            width: 250px;
+        }
+
+        .copy-header {
+
+            margin: 0px;
+            max-width: none;
+            /*no va a tener ningun limitante para esta resolución*/
+            font-size: 22px;
+            font-weight: 400;
+        }
+    }
+}
