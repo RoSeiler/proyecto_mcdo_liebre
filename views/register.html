@@ -16,9 +16,10 @@
 <body>
    <header class="main-header">
       <div class="main-header-top-bar">
-         <img class="logo" src="/images/logo-mercado-liebre.svg" alt="logo del sitio">
-
-         <form action="barra-busqueda">
+         <a href="/">
+            <img class="logo"src="/images/logo-mercado-liebre.svg" alt="logo del sitio"> 
+            </a> 
+         <form action="search">
             <input type="text" placeholder="Buscar productos,marcas">
             <button> <i class="fas fa-search"></i></button>
          </form>
@@ -63,10 +64,10 @@
          <ul class="register-form">
             <div class="form-dates">
                <li>
-                  <input type="text" name="name" placeholder="Nombre y apellido">
+                  <input type="text" name="name" placeholder="Nombre y apellido" required>
                </li>
                <li>
-                  <input type="text" name="new-user" placeholder=" Nombre de usuario">
+                  <input type="text" name="new-user" placeholder=" Nombre de usuario"required>
                </li>
 
                <div class="form-texts">

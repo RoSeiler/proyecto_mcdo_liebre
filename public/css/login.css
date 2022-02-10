@@ -54,6 +54,13 @@ input {
     border-radius: 4px;
 }
 
+button{
+    color: grey;
+    border: none;
+    padding: 2%;
+    border-radius: 4px;
+}
+
 .boton {
     justify-content: center;
     display: flex;

@@ -9,86 +9,109 @@
 }
 
 /*-----------------Header----------------*/
-.barra-busqueda {
+.search {
     display: flex;
     width: 30px;
     padding: 20px;
+    width: 50%;/*revisar*/
+    
+}
+input {
+    
+    border: none;
+    width:70%;
+    padding: 2%;
+    border-radius: 4px;
+}
+button{
+    color:#1259c3;
+    border: none;
+    padding: 2%;
+    border-radius: 4px;
 }
 
 ::placeholder {
-    color: grey;
+    color: #666;
+}
+
+.blue-txt {
+    color: #03264C;
 }
 
 .main-header {
     background-color: #EAC926;
     width: 100vw;
     padding: 20px;
-    display: block;
- 
+    display: block; 
+}
 
-    
+.burger-menu{
+    background-color:#1259c3;
+    color: white;
+    display: block;
+    max-width: 50px;
+    padding: 15px 0;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 20px;
+    margin: auto; 
 }
 
 .logo {
     width: 200px;
     margin: 0px;
     padding: 0px;
-    
-
-}
-
-h3 {
-    font-size: 24px;
 }
 
 .copy-header {
     font-weight: 400;
     text-align: center;
     font-size: 20px;
-
 }
 
-.texto-azul {
-    color: #03264C;
+h2{
+    font-size: 24px;
 }
 
-.main-header-navbar {
-    display: none;
-    /*oculto la barra para la version mobile*/
-}
-
-.main-header-navbar ul {
+.main-navbar ul {
     list-style: none;
     margin: 0%;
     padding: 0%;
     font-size: 24px;
+    color:#1259c3;
+    
 }
 
-.main-header-navbar a {
+.main-navbar{
+    display: none;
+    padding-top: 30px;
+}
+
+.main-navbar a {
     /*la a me permite aplicarle estilo a cualquier elemento adentro de cualquiera de las 2 navbar*/
     text-decoration: none;
-    color: rgb(27, 26, 26);
+    color: #666;
     display: inline-block;
     /*dado que todas las etiquetas a son elementos de linea y no quiero que sean de linea. Asi les voy a poder pner un poco de relleno:*/
-    padding: 3px 0;
+    padding: 5px 0;
     font-size: 17px;
+    display: flex;
 }
 
-.burger-menu {
-    background-color: #1259c3;
-    color: #ffff;
-    display: block;
-    /*lo quiero tratar como bloque*/
-    font-size: 20px;
-    max-width: 50px;
-    padding: 15px 0;
-    /*arriba y abajo 15, a los costados 0 porque ya tengo definido el ancho*/
-    border-radius: 8px;
-    text-align: center;
-    font-size: 22px;
-    margin: auto;
-    /*comoe specifique que sea un elemento de bloque, con margin auto ya lo alinea*/
+
+.main-header-navbar {
+    display: none;
+    width: 100vw;
+    /*oculto la barra para la version mobile*/
 }
+
+
+
+
+
+
+
+
 
 
 /*-----------------estructura body-----------------------------*/
@@ -101,13 +124,16 @@ body {
 
 }
 
+.banner{
+    width: 100vw;
+    display: flex;
+   
+}
+
 .product {
     display: flex;
     flex-direction: column;
 }
-
-
-
 
 
 .products-container {
@@ -168,6 +194,22 @@ justify-content: space-around;/*funciona para la alineacion en el eje main*/
     align-self: flex-end;
     margin-top: -30px;
     font-size: 20px;
+    position: absolute;
+    border: 1px solid #39b54a;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    display: flex; 
+}
+
+.fa-truck:hover{
+    transform: rotate(-90deg);
+    
+}
+.fa-truck{
+    transition: .5s;
 }
 
 
@@ -181,12 +223,12 @@ justify-content: space-around;/*funciona para la alineacion en el eje main*/
     
     
 }
-.tamaño-titulares {
+.last-visit {
     align-self: flex-start;
 
 }
 
-.tamaño-precios {
+.prices{
     font-size: 18px;
     width: 70%;
     
@@ -202,14 +244,17 @@ justify-content: space-around;/*funciona para la alineacion en el eje main*/
     
 }
 
-.tamaño-descripcion {
+.description {
     font-size: 16px;
     /*margin-top: 20px;*/
     color: #666;
     display: none;
 }
 
-
+.product:hover .description{
+    display: block;
+    transition: .5s;
+}
 
 
 
@@ -265,13 +310,14 @@ justify-content: space-around;/*funciona para la alineacion en el eje main*/
 
 /*------------------tablets --------------------*/
 
-@media (min-width: 361px) {
+@media (min-width: 768px) {
 
 
   
 
 
     .main-header-top-bar {
+        
         display: flex;
         /* --para hacer visible un elemento--le indico que vamos a trabajar con flexbox, con flexbox trabajo sobre el contenedor y no sobre los elementos*/
         justify-content: space-between;
@@ -291,7 +337,7 @@ justify-content: space-around;/*funciona para la alineacion en el eje main*/
         /*para que no se muestre la hamburguesita ene sta medida*/
     }
 
-    .main-header-navbar {
+    .main-navbar {
 
         display: flex;
         /*la navbar contiene muchos elementos*/
@@ -299,13 +345,13 @@ justify-content: space-around;/*funciona para la alineacion en el eje main*/
         /*para que nso queden los elementos separados por un espacio */
     }
 
-    .main-header-navbar ul {
+    .main-navbar ul {
         /*de la main navbar los elementos ul van a tener tmb display flex*/
 
         display: flex;
     }
 
-    .main-header-navbar li {
+    .main-navbar li {
         /*de la main navbar los elementos ul van a tener tmb display flex*/
         margin: 0 5px;
     }
@@ -323,7 +369,7 @@ justify-content: space-around;/*funciona para la alineacion en el eje main*/
         box-shadow: 0px 0px 10px rgb(100, 100, 100);
     }
 
-    .tamaño-descripcion {
+    .description {
         font-size: 16px;
         margin-top: 20px;
         color: #666;
@@ -407,7 +453,7 @@ justify-content: space-around;/*funciona para la alineacion en el eje main*/
         box-shadow: 0px 0px 10px rgb(100, 100, 100);
     }
 
-    .tamaño-descripcion {
+    .description {
         font-size: 16px;
         margin-top: 20px;
         color: #666;

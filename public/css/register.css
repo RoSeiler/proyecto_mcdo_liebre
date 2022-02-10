@@ -9,14 +9,29 @@
 }
 
 /*-----------------Header----------------*/
-.barra-busqueda {
+.search {
     display: flex;
     width: 30px;
     padding: 20px;
 }
 
+input {
+    
+    border: none;
+    width:70%;
+    padding: 2%;
+    border-radius: 4px;
+}
+
 ::placeholder {
     color: grey;
+}
+
+ button{
+    color: grey;
+    border: none;
+    padding: 2%;
+    border-radius: 4px;
 }
 
 .main-header {
